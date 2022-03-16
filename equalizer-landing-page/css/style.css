@@ -1,4 +1,5 @@
 body {
+  margin: 0;
   width: 100%;
   font-family: "IBM Plex Sans", sans-serif;
 }
@@ -8,11 +9,11 @@ main {
   background-repeat: no-repeat;
   background-position: 0px -300px;
   width: 375px;
-  margin: 40px auto 0 auto;
+  margin: 0 auto;
 }
 main .top-textarea {
-  padding-top: 40px;
   margin: 0 24px 0 24px;
+  padding-top: 40px;
 }
 main .top-textarea h1 {
   letter-spacing: -1px;
@@ -142,6 +143,9 @@ footer .bottom-text-container p {
 }
 footer .bottom-text-container p span {
   font-weight: 700;
+}
+footer .bottom-text-container .social {
+  margin-top: 50px;
 }
 footer .bottom-text-container .social a {
   margin-right: 20px;

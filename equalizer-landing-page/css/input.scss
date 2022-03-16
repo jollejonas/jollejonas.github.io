@@ -6,6 +6,7 @@ $creamwhite: hsl(20, 33%, 98%);
 $darkblue: hsl(244, 23%, 12%);
 
 body {
+    margin: 0;
     width: 100%;
     font-family: $font;
 }
@@ -16,11 +17,11 @@ main {
     background-position: 0px -300px;
 
     width: 375px;
-    margin: 40px auto 0 auto;
+    margin: 0 auto;
 
     .top-textarea {
-        padding-top: 40px;
         margin: 0 24px 0 24px;
+        padding-top: 40px;
         h1 {
             letter-spacing: -1px;
             line-height: 40px;
@@ -167,6 +168,7 @@ footer {
             }
         }
         .social {
+            margin-top: 50px;
             a {
                 margin-right: 20px;
                 img {
