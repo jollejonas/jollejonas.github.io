@@ -19,6 +19,9 @@ main {
     width: 375px;
     margin: 0 auto;
 
+    .tablet-desktop-img {
+        display: none;
+    }
     .top-textarea {
         margin: 0 24px 0 24px;
         padding-top: 40px;
@@ -128,7 +131,7 @@ main {
                     color: $creamwhite;
                 }
 
-                #ios:hover{
+                #ios:hover {
                     background-color: $cyan;
                 }
                 #android {
@@ -137,7 +140,7 @@ main {
                     color: $darkblue;
                 }
 
-                #android:hover{
+                #android:hover {
                     background-color: $orange;
                 }
             }
@@ -163,8 +166,12 @@ footer {
             font-weight: 400;
             line-height: 26px;
 
-            span {
+            .email {
                 font-weight: 700;
+            }
+            .email::before {
+                content: "\a";
+                white-space: pre;
             }
         }
         .social {
@@ -176,6 +183,209 @@ footer {
                     width: 20px;
                 }
             }
+            a:hover {
+                filter: invert(72%) sepia(97%) saturate(3729%) hue-rotate(327deg) brightness(102%) contrast(96%);
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 760px) {
+    body {
+        background-image: url("../assets/bg-main-tablet.png");
+        background-repeat: no-repeat;
+        background-position: -400px -250px;
+
+        main {
+            background-image: none;
+            width: 700px;
+            height: 1600px;
+
+            .tablet-desktop-img {
+                display: block;
+                position: absolute;
+                top: -40px;
+                right: -40px;
+            }
+            .top-textarea {
+                width: 520px;
+                margin: 0;
+                padding-top: 60px;
+                h1 {
+                    margin-top: 100px;
+                    letter-spacing: -0.7px;
+                    line-height: 64px;
+                    font-size: 64px;
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+
+            .info-container {
+                margin-top: 100px;
+                .phone-img {
+                    img {
+                        width: 270px;
+                    }
+                }
+
+                .box1 {
+                    height: 600px;
+                    img {
+                        width: 280px;
+                        height: 420px;
+                        margin: -30px 185px 0 235px;
+                    }
+                }
+                .box2 {
+                    width: 400px;
+                    top: -450px;
+                    left: 250px;
+                }
+            }
+        }
+        footer {
+            width: 700px;
+            margin: 0 auto;
+            .bottom-text-container {
+                margin: 0;
+
+                .two-col-flex {
+                    display: flex;
+                    justify-content: space-between;
+                    p {
+                        width: 400px;
+                        .email::before {
+                            content: "";
+                            white-space: unset;
+                        }
+                    }
+                    .social {
+                        a {
+                            margin-right: 0;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 1000px) {
+    body {
+        background-image: url("../assets/bg-main-desktop.png");
+        background-repeat: no-repeat;
+        background-position: -250px -250px;
+        main {
+            background-image: none;
+            width: 1110px;
+            margin: 0 auto;
+
+            .top-textarea {
+                width: 1100px;
+                h1 {
+                    width: 1000px;
+                    font-size: 88px;
+                    line-height: 88px;
+                    letter-spacing: 1px;
+                }
+                p {
+                    width: 850px;
+                    font-size: 20px;
+                    line-height: 34px;
+                }
+            }
+            .info-container {
+                .phone-img {
+                    margin-top: 50px;
+                    img {
+                        margin-left: 100px;
+                        width: 315px;
+                    }
+                }
+
+                .box1 {
+                    margin-top: -445px;
+                    img {
+                        margin-left: 60px;
+                        width: 312px;
+                        height: 465px;
+                    }
+                }
+                .box2 {
+                    width: 450px;
+                    height: 625px;
+                    top: -520px;
+                    left: 550px;
+                    padding-bottom: 10px;
+                    .bottom-text-container {
+                        margin: 0 auto;
+                        padding-top: 65px;
+                        width: 330px;
+                        h1 {
+                            font-size: 40px;
+                            line-height: 52px;
+                        }
+                        p {
+                            font-size: 20px;
+                            line-height: 34px;
+                            margin-top: 25px;
+                        }
+                    }
+                    .download-container {
+                        margin: 25px auto 0 auto;
+                        width: 330px;
+                        .price-container {
+                            h1 {
+                                font-size: 65px;
+                                line-height: 52px;
+                            }
+                            p {
+                                font-size: 20px;
+                                line-height: 32px;
+                                letter-spacing: -0.2px;
+                            }
+                        }
+                        a {
+                            .button {
+                                font-size: 18px;
+                                line-height: 32px;
+                                letter-spacing: -0.18px;
+                                width: 330px;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                            #android {
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer {
+            width: 1110px;
+            .bottom-text-container{
+                margin-top: 50px;
+                display: flex;
+                justify-content: space-between;
+                .two-col-flex{
+                    p{
+                        margin-top: 0px;
+                        margin-right: 300px;
+                        font-size: 16px;
+                        line-height: 26px;
+                    }
+                    .social{
+                        margin-top: 30px;
+                    }
+                }
+            }
+
         }
     }
 }
